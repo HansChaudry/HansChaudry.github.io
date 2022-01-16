@@ -1,0 +1,111 @@
+body{
+    background-color: lightskyblue;
+}
+
+.hero{
+    height: 90vh;
+    width: 100%;
+    margin-bottom: 2%;
+    border: 2px solid red;
+    position:relative;
+}
+    
+.hero img {
+    width:100%;
+    height: 100%;
+}
+    
+.sidekick{
+    text-align: center;
+    font-family: Marker Felt, fantasy;
+    font-size: 110%;
+    border: 4px solid teal;
+    opacity: .9;
+    background-color: gray;
+    position:absolute;
+    width: 15%;
+    height: 15%;
+    right: 0%;
+    bottom: 40%;
+    text-align: center;
+}
+
+.sidekick button{
+    font-family: Marker Felt, fantasy;
+    font-size: 110%;
+    width: 100%;
+    height: 40%;
+    border: 3px solid;
+}
+.sidekick button a{
+    text-decoration: none;
+}
+.sidekick button:hover{
+    border-color: navy;
+    background-color: teal;
+    /* padding: 5%; */
+    box-shadow: -5px 5px 2px 1px rgba(0, 0, 0, 0.5)
+}
+
+.clock{
+    border: 3px solid black;
+    width: 25%;
+    height: 35%;
+    opacity: 1;
+    background-color: lightslategray;
+    position:absolute;
+    left: 0%;
+    top: 0%;
+    padding: 1%;
+}
+
+.clock img{
+    width: 100%;
+    height: 100%;
+}
+
+.minutes{
+    /* width: 25%;
+    height: 10%;
+    opacity: 1;
+    position:absolute;
+    transform-origin: 50% 100%;
+    left: 0%;
+    top: 0%;
+    padding: 1%; */
+    height: 15%;
+    left: 50%;
+    position: absolute;
+    top: 42.5%;
+    transform-origin: center left;
+    width:28%;
+    animation: minute_rotate 10s 2s infinite linear;
+}
+
+.hours{
+    height: 15%;
+    left: 50%;
+    position: absolute;
+    top: 42.5%;
+    transform-origin: center left;
+    width:20%;
+    animation: hour_rotate 10s 2s infinite linear;
+    z-index: 8;
+}
+
+@keyframes hour_rotate {
+    100%{
+      transform: rotate(30deg);
+    }
+}
+
+@keyframes minute_rotate {
+    100%{
+      transform: rotate(240deg);
+    }
+}
+
+.hand img{
+    width: 100%;
+    height: 100%;   
+}

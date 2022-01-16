@@ -1,0 +1,212 @@
+body { 
+    margin: 2px;
+    background-color: wheat;
+    font-family: Marker Felt, fantasy;
+}
+
+
+/* Everyhting about the header */
+.header {
+    border-top: 2px solid blue;
+    border-bottom: 3px solid black;
+    overflow: hidden;
+    background-color: #c2bebe;
+    padding: 10px 10px;
+}
+
+.header a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 30px; 
+    border-radius: 4px;
+    font-family: Marker Felt, fantasy;
+}
+  
+.header a.logo {
+    font-size: 25px;
+    font-weight: bold;
+    border: 2px solid;
+    /* border: 2px solid gray; */
+}
+
+.header a.logo:hover{
+    border-color: blue;
+}
+  
+.header a:hover , .footer a:hover{
+    color: blue;
+}
+
+.headerRight {
+    float: right;
+}
+
+/* everything about the footer */
+.footer {
+    text-align: center;
+    border-top: 2px solid black;
+    border-bottom: 2px solid red;
+    overflow: hidden;
+    background-color: #c2bebe;
+    padding: 20px;
+}
+
+.footer a{
+    color: black;
+    text-align: center;
+    padding: 12px;
+    font-size: 18px; 
+    font-family: Marker Felt, fantasy;
+    border-right: 1px solid black;
+}
+
+.footer a:last-child{
+    border-right: none;
+}
+
+/* HOME PAGE CSS */
+.intro{
+    font-family: Marker Felt, fantasy;
+    font-size: 21px;
+    text-align: center;
+    text-indent: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.Activities{
+    border: 2px solid black;
+    background-color: lightblue;
+    height: auto;
+    text-align: center;
+    padding: 2%;
+    margin-left: 2px;
+    overflow: hidden;
+
+}
+
+/*.Activities subdivisions that contain images */
+.Activities div.picture{
+    width: 20%;
+    height: 45%;
+}
+
+/* IMAGES INSIDE OF .Activities subdivisions */
+.Activities div.picture img{
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+/*.Activities subdivisions that contain text */
+.Activities div.info{
+    width: 80%;
+    height: 40%;
+    font-size: 1.4pc;
+}
+
+.events{
+    margin-top: 4%;
+    border-bottom: 2px solid black; 
+    text-align: center; 
+}
+
+.events table{
+    border: 2px solid black;
+    margin-bottom: 4%;
+    margin-left: 2px;
+    width: 100%;
+    height: auto;
+    font-size: 21px;
+}
+
+.events th{
+    border: 1px solid black; 
+    background-color: lightgreen;
+    padding: 5px;
+}
+
+.events td{
+    border: 1px solid black; 
+    background-color: lightskyblue;
+    padding: 5px;
+}
+
+.newsfeed{
+    width: 100%;
+    margin-top: 4%;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.pricing{
+    /* overflow: hidden; */
+    text-align: center;
+    height: 450px;
+    padding: 4%;
+    padding-bottom: 6pc;
+    border-bottom: 2px solid black;
+}
+
+.pricing .chart{
+    width: 99%;
+    height: 90%;
+    margin-left: 2px;
+    float: left;
+}
+
+.chart img{
+    border: 2px solid;
+    height: 99%;
+    border-radius: 10px;
+    margin-left: 2px;
+    float: left;
+}
+
+.contactDiv{
+    width: 100%;
+    margin-top: 4%;
+    border-bottom: 2px solid black;
+    text-align: center;
+}
+
+.contactDiv ul{
+    list-style: none;
+    margin-left: 2pc;
+    display: inline-block;
+    font-size: 21px;
+}
+
+.contactDiv li{
+    padding: 10px;
+}
+
+/* Activity pages */
+.mainbox{
+    text-align: center;
+    background-color: #c2bebe;
+    padding: 2%;
+    height: 350px;
+    margin-bottom: 4%;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+}
+
+.subbox{
+    background-color: lightblue;
+    overflow: hidden;
+    border: 2px solid;
+    width: 31%;
+    height: 90%;
+    float: left;
+    margin-left: .2pc;
+    font-size: 1.4pc;
+    padding: 2px;
+}
+
+.subbox img{
+    width: 100%;
+    height: 100%;
+}
