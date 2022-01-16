@@ -189,7 +189,6 @@ body{
 }
 
 .ProductRow{
-    float: left;
     height: 500px;
     width: 100%;
     display: flex;
@@ -225,4 +224,34 @@ body{
     width: 100%;
     height: 30%;
     overflow:auto;
+}
+
+.footer{
+    background-color: #000000;
+    height: 350px;
+    position: relative;
+}
+
+.nav{
+    background-color: white;
+    position: absolute;
+    display: block;
+    width: 100%;
+    list-style: none;
+    float: left;
+    /* text-align: center; */
+}
+.inside{
+    float: left;
+    list-style: none;
+    text-align: center;
+    margin-right: 5%;
+}
+
+.inside:last-child{
+    margin-right: 0%;
+}
+
+.last{
+
 }
