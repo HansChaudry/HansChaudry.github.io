@@ -228,30 +228,63 @@ body{
 
 .footer{
     background-color: #000000;
-    height: 350px;
+    height: 450px;
     position: relative;
 }
 
 .nav{
-    background-color: white;
     position: absolute;
     display: block;
     width: 100%;
+    height: 30%;
     list-style: none;
     float: left;
+    padding: 0 3%;
     /* text-align: center; */
 }
 .inside{
     float: left;
     list-style: none;
     text-align: center;
-    margin-right: 5%;
+    width: 23%;
+    height: 100%;
+    border: 2px solid;
+    /* margin-left: 0%; */
+    color: gray;
+    padding: 0%;
 }
 
 .inside:last-child{
     margin-right: 0%;
+    margin-right: 3%;
 }
 
 .last{
-
+    height: 60%;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    top: 36%;
+    border: 2px solid red;
 }
+
+.connect{
+    color: white;
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    border: 2px solid blue;
+    font-size: 120%;
+}
+
+.socials{
+    position: absolute;
+    top: 18%;
+    right: 0%;
+    
+}
+
+.socials img{
+    width: 45px;
+}
+
