@@ -4,7 +4,7 @@ body{
 
 .stage, .hero, .grid{
     margin-top: 6px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: Comic Sans MS;
 }
 
 /* HEADER CSS */
@@ -216,6 +216,12 @@ body{
     padding: 4%;
     text-decoration: none;
 }
+
+.product a:hover{
+    border-color: navy;
+    background-color: teal;
+    box-shadow: -5px 5px 2px 1px rgba(0, 0, 0, 0.5);
+}
 .product a[title]:hover::after{
     content: attr(title);
     background-color: gray;
@@ -248,6 +254,8 @@ body{
     opacity: 1;
     pointer-events: all;
 }
+
+
 
 .mdlBox{
     background-color: white;
