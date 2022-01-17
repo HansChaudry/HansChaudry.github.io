@@ -4,7 +4,7 @@ body{
 
 .stage, .hero, .grid{
     margin-top: 6px;
-    font-family: Comic Sans MS, Comic ;
+    font-family: Comic Sans MS, Comic Sans, cursive;
 }
 
 /* HEADER CSS */
@@ -131,12 +131,14 @@ body{
 .sidekick{
     text-align: center;
     font-size: 90%;
-    border: 4px solid #ef9d2f;
+    border: 2px solid #ef9d2f;
     opacity: .8;
     background-color: gray;
     position:absolute;
     width: 50%;
+    top: 0%;
     right: 0%;
+    text-align: center;
 }
 
 .bio{
@@ -226,12 +228,6 @@ body{
     height: 50%;
 }
 
-.info{
-    width: 100%;
-    height: 30%;
-    overflow:auto;
-}
-
 
 /* MODAL WINDOW  */
 .modalwin{
@@ -258,7 +254,7 @@ body{
     width: 60%;
     margin: auto;
     height: 55%;
-    top: 2%;
+    top: 10%;
     position: relative;
     overflow: auto;
 }
@@ -266,16 +262,16 @@ body{
 .heading{
     width: 70%;
     margin: 0 15%;
-    height: 5.5%;
+    height: 25px;
     font-size: 20px;
     position: relative;
-    background-color: gray;
+    /* background-color: gray; */
     text-align: center;
 }
 
 .image{
-    margin-right: 15%;
-    height: 35%;
+    margin-right:10%;
+    height: 240px;
     width: 40%;
     float: left;
 }
@@ -285,8 +281,14 @@ body{
     height: 100%;
 }
 
+.info{
+    width: 50%;
+    float: left;
+}
+
 .description{
-    margin-top: 5%;
+    float: left;
+    margin-top: 2%;
     width: 80%;
     padding: 4px 10%;
     height: 40%;
@@ -311,7 +313,6 @@ body{
 
 /* FOOTER  */
 .footer{
-    width: 100%;
     background-color: black;
     height: 450px;
 } 
