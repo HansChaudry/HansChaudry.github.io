@@ -286,3 +286,13 @@ body{
     width: 45px;
 }
 
+.copyright{
+    color: white;
+    bottom: 0%;
+    margin: 0 10%;
+    position: absolute;
+    bottom: 0%;
+    width: 80%;
+    text-align: center;
+}
+
