@@ -4,7 +4,7 @@ body{
 
 .stage, .hero, .grid{
     margin-top: 6px;
-    font-family: Comic Sans MS, Comic Sans, cursive;
+    font-family: Comic Sans MS, Comic ;
 }
 
 /* HEADER CSS */
@@ -136,9 +136,7 @@ body{
     background-color: gray;
     position:absolute;
     width: 50%;
-    top: 0%;
     right: 0%;
-    text-align: center;
 }
 
 .bio{
