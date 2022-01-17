@@ -4,7 +4,7 @@ body{
 
 .stage, .hero, .grid{
     margin-top: 6px;
-    font-family: Comic Sans MS;
+    font-family: Comic Arial, Helvetica, sans-serif ;
 }
 
 /* HEADER CSS */
