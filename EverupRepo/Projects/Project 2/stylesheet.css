@@ -2,8 +2,9 @@ body{
     background-color: white;
 }
 
-.stage, .hero, .grid{
+.stage, .hero, .grid, .bio, .ProductRow{
     margin-top: 6px;
+    margin-left: 0% 1%;
     font-family: Comic Sans MS;
 }
 
@@ -87,6 +88,7 @@ body{
     box-sizing: border-box;
     overflow: hidden;
     text-align: center;
+    margin-left: 0%;
 }
 
 .slidegroup{
@@ -191,12 +193,13 @@ body{
 
 /* PRODUCT ROW  */
 .ProductRow{
-    height: 500px;
+    height: 560px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .product{
