@@ -215,6 +215,13 @@ body{
     padding: 4%;
     text-decoration: none;
 }
+.product a[title]:hover::after{
+    content: attr(title);
+    background-color: gray;
+    position: absolute;
+    top: -100%;
+    left: 0;
+  }
 
 .product img{
     width: 90%;
@@ -228,32 +235,103 @@ body{
 }
 
 
+/* MODAL WINDOW  */
+.modalwin{
+    background-color: rgba(80, 80, 83, 0.705);
+    /* height: 300px; */
+    width: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modalwin:target{
+    opacity: 1;
+    pointer-events: all;
+}
+
+.mdlBox{
+    background-color: white;
+    border: 2px solid;
+    width: 60%;
+    margin: auto;
+    height: 55%;
+    top: 10%;
+    position: relative;
+    overflow: auto;
+}
+
+.heading{
+    width: 70%;
+    margin: 0 15%;
+    height: 5.5%;
+    font-size: 20px;
+    position: relative;
+    background-color: gray;
+    text-align: center;
+}
+
+.image{
+    margin-right: 15%;
+    height: 35%;
+    width: 40%;
+    float: left;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+}
+
+.description{
+    margin-top: 5%;
+    width: 80%;
+    padding: 4px 10%;
+    height: 40%;
+    background-color: gray;
+}
+
+.description a, .close{
+    background-color: lightgray;
+    padding: 6px;
+    text-decoration: none;
+    border: 2px solid #000000;
+}
+
+.close{
+    background-color: lightgray;
+    border: 2px solid #000000;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+
 /* FOOTER  */
 .footer{
-    background-color: #000000;
+    background-color: black;
     height: 450px;
     position: relative;
-}
+} 
 
 .nav{
     position: absolute;
-    display: block;
     width: 100%;
     height: 30%;
     list-style: none;
     float: left;
     padding: 0 3%;
-    /* text-align: center; */
-}
-
+} 
 .inside{
     float: left;
     list-style: none;
     text-align: center;
     width: 23%;
     height: 100%;
-    border: 2px solid;
-    /* margin-left: 0%; */
     color: gray;
     padding: 0%;
 }
