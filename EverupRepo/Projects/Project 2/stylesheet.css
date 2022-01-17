@@ -165,6 +165,7 @@ body{
     background-image: 
     linear-gradient(rgba(2,0,36,.5), rgba(53,53,186,.5), rgba(0,212,255,.5)), 
     url(images/quote.jpeg);
+    background-size: fill;
     position: relative;
     box-sizing: border-box;   
 }
