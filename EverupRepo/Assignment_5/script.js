@@ -1,8 +1,8 @@
 function convertTemp() {
     let x = document.getElementById('temp').value;
     let ans = (x * 1.8) + 32;
-    document.getElementById('answer').innerHTML = `${x}°C is ${ans}°F`;
-    document.getElementById('second').innerHTML = `${ans}°F is ${(ans - 32) * 5/9}°C`;
+    document.getElementById('answer').innerHTML = `${x}°C is ${ans.toFixed(1)}°F`;
+    document.getElementById('second').innerHTML = `${ans.toFixed(1)}°F is ${((ans - 32) * 5/9).toFixed(1)}°C`;
 }
 
 function bmiCalc(){
