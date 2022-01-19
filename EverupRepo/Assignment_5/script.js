@@ -1,3 +1,4 @@
+//Part A
 function convertTemp() {
     let x = document.getElementById('temp').value;
     let ans = (x * 1.8) + 32;
@@ -5,6 +6,8 @@ function convertTemp() {
     document.getElementById('second').innerHTML = `${ans.toFixed(1)}°F is ${((ans - 32) * 5/9).toFixed(1)}°C`;
 }
 
+
+//Part B
 function bmiCalc(){
     let johnBmi = (document.getElementById('JohnMass').value
     /document.getElementById('JohnHeight').value **2) * 703;
@@ -18,18 +21,13 @@ function bmiCalc(){
         console.log("John's BMI is higher than Lucas'!");
     }
 
-    document.getElementById('winner').innerHTML = `John's BMI ${johnBmi.toFixed(1)} is higher than Lucas’ BMI ${lucasBmi.toFixed(1)}, that is ${johnBmi > lucasBmi}!`;
+    document.getElementById('winner').innerHTML = `John's BMI ${johnBmi.toFixed(1)} is higher than Lucas’ BMI ${lucasBmi.toFixed(1)}, that is statement ${johnBmi > lucasBmi}!`;
 }
 
+//Part C
+let num = prompt("Enter a number:");
 
-// If user enters nothing or strings, log "Please enter a number!" to console;
-// If user enter 10, log "You win 10 point" to console;
-// If user typed 8, log "You win 8 points to console
-// If the number is not 8 or 10, log "NOT MATCHED!!" to console
-
-let num = Number(prompt("Enter a number:"));
-
-if(num == null || isNaN(num)){
+if(num == null || isNaN(Number(num))){
     console.log("Please enter a number!");
 }
 else if(num == 10){
@@ -41,11 +39,3 @@ else if(num == 8){
 else if(num != 10 || num != 8){
     console.log("NOT MATCHED!!");
 }
-
-
-
-// document.getElementById('temp').addEventListener('keypress', function (e) {
-//     if (e.key === 'Enter') {
-//       convertTemp();
-//     }
-// });
