@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+</head>
+<body>
+    <p>The Temperature Converter</p>
+    <form method="get">
+        Temperature in Celsius:<br> <input type="number" id="temp">
+        <br>
+        <br>
+        <input type="button" onclick="convertTemp()" value="Submit"><br><br>
+        Temperature in Fahrenheit: <p id="answer"></p>
+        Similarly: <p id="second"></p>
+    </form>
+
+    <form method="get">
+        John's Mass(lbs):<br> <input type="number" id="JohnMass"><br>
+        John's Height(inches):<br> <input type="number" id="JohnHeight"><br>
+        Lucas' Mass(lbs):<br> <input type="number" id="LucasMass"><br>
+        Lohn's Height(inches):<br> <input type="number" id="LucasHeight"><br><br>
+        <input type="button" onclick="bmiCalc()" value="Submit">
+        <p id="winner"></p>
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
