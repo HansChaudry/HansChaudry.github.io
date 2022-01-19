@@ -21,7 +21,7 @@ function bmiCalc(){
         console.log("John's BMI is higher than Lucas'!");
     }
 
-    document.getElementById('winner').innerHTML = `John's BMI ${johnBmi.toFixed(1)} is higher than Lucas’ BMI ${lucasBmi.toFixed(1)}, that is statement ${johnBmi > lucasBmi}!`;
+    document.getElementById('winner').innerHTML = `John's BMI ${johnBmi.toFixed(1)} is higher than Lucas’ BMI ${lucasBmi.toFixed(1)}, this statement is ${johnBmi > lucasBmi}!`;
 }
 
 //Part C
