@@ -27,7 +27,7 @@ function bmiCalc(){
 //Part C
 let num = prompt("Enter a number:");
 
-if(num == null || isNaN(Number(num))){
+if(num == null || isNaN(Number(num)) || num === ''){
     console.log("Please enter a number!");
 }
 else if(num == 10){
