@@ -26,14 +26,21 @@ function bmiCalc(){
 // If user enter 10, log "You win 10 point" to console;
 // If user typed 8, log "You win 8 points to console
 // If the number is not 8 or 10, log "NOT MATCHED!!" to console
-// let num = prompt("Please enter a number");
 
-// if (num == null || typeof(num) == String) {
-//   console.log("Please enter a number!");
-// }
-// else if(num === 10){
-//     console.log("You win 10 point");
-// }
+let num = Number(prompt("Enter a number:"));
+
+if(num == null || isNaN(num)){
+    console.log("Please enter a number!");
+}
+else if(num == 10){
+    console.log("You win 10 points");
+}
+else if(num == 8){
+    console.log("You win 8 points to console");
+}
+else if(num != 10 || num != 8){
+    console.log("NOT MATCHED!!");
+}
 
 
 
