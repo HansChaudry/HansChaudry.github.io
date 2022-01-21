@@ -21,7 +21,7 @@ function findWinner(id1, id2, id3, id4, id5, id6, loc){
     }
     //NOBODY WINS?
     else{
-        document.getElementById(loc).innerHTML = "Nonobody Wins";
+        document.getElementById(loc).innerHTML = "Nobody Wins";
     }
 }
 
