@@ -11,6 +11,9 @@
             background-color: lightgray;
             padding: 20px;
             margin-bottom: 20px;
+            margin-right: 1%;
+            width: 39%;
+            float: left;
             font-family: "Comic Sans MS", "Comic Sans";
         }
     </style>
@@ -18,13 +21,15 @@
 <body style="background-color: lightcyan;">
     
     <form method="get" class="Assignment6">
-        Temperature in Celsius:<br><br>
-        <input type="number" id="nets1"><br>
-        <input type="number" id="nets2"><br>
-        <input type="number" id="nets3"><br>
-        <input type="number" id="knciks4"><br>
-        <input type="number" id="knicks5"><br>
-        <input type="number" id="knicks6"><br><br>
+        Nets' Scores<br><br>
+        <input type="number" id="nets1" placeholder="Game 1"><br>
+        <input type="number" id="nets2" placeholder="Game 2"><br>
+        <input type="number" id="nets3" placeholder="Game 3"><br><br>
+
+        Knicks' Scores<br><br>
+        <input type="number" id="knciks4" placeholder="Game 1"><br>
+        <input type="number" id="knicks5" placeholder="Game 2"><br>
+        <input type="number" id="knicks6" placeholder="Game 3"><br><br>
 
         <input type="button" onclick="findWinner('nets1','nets2','nets3','knciks4','knicks5','knicks6', 'winner')" value="Submit"><br>
         <p id="winner"></p>
@@ -32,7 +37,7 @@
 
     <form method="get" class="Assignment6">
         Tip Calculator:<br><br>
-        <input type="number" id="cost"><br><br>
+        <input type="number" id="cost" placeholder="What's the price?"><br><br>
 
         <input type="button" onclick="tipCalc('cost', 'bill')" value="Submit"><br>
         <p id="bill"></p>
@@ -40,12 +45,12 @@
 
     <form method="get" class="Assignment6">
         Celsius to Fahrenheit:<br><br>
-        <input type="number" id="cel"><br><br>
+        <input type="number" id="cel" placeholder="Temperature"><br><br>
         <input type="button" onclick="ConvertCelsiusToFahrenheit('cel', 'result1')" value="Submit"><br>
         <p id="result1"></p>
 
         Fahrenheit to Celsius:<br><br>
-        <input type="number" id="far"><br><br>
+        <input type="number" id="far" placeholder="Temperature"><br><br>
         <input type="button" onclick="ConvertFahrenheitToCelsius('far', 'result2')" value="Submit"><br>
         <p id="result2"></p>
     </form>
