@@ -16,7 +16,7 @@ function findWinner(id1, id2, id3, id4, id5, id6, loc){
         document.getElementById(loc).innerHTML = "Knicks Win";
     }
     //IS IT A DRAW?
-    else if (netsavg === knicksavg && (netsavg > 100 && knicksavg)){
+    else if (netsavg === knicksavg && (netsavg >= 100 && knicksavg)){
         document.getElementById(loc).innerHTML = "It's a Draw";
     }
     //NOBODY WINS?
