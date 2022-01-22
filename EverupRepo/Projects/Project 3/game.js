@@ -14,19 +14,27 @@ function verify() {
 
     if (isNaN(guess)) {
         output.innerHTML = 'Enter a number.';
-    } else if (number === guess) {
+    }
+    
+    else if (number === guess) {
         output.textContent ='You guessed right!';
-    } else if (guess > 100) {
+    } 
+    
+    else if (guess > 100) {
         wrongs +=1;
         score.innerHTML = `Score = ${10 - wrongs}`;
         output.textContent = 'Your guess is out of the 1 to 100 range.';
         addHistory(guess);
-    } else if (guess > number) {
+    }
+    
+    else if (guess > number) {
         wrongs += 1;
         score.innerHTML = `Score = ${10 - wrongs}`;
         output.textContent = 'You\'re getting warmer.';
         addHistory(guess);
-    } else if (guess < number) {
+    }
+    
+    else if (guess < number) {
         wrongs += 1;
         score.innerHTML = `Score = ${10 - wrongs}`;
         output.textContent = 'You\'re getting cold.';
@@ -34,17 +42,6 @@ function verify() {
     }
     return false;
 }
-
-// document.getElementById('guessNumber').onsubmit = verify;
-
-// location.reload();
-// /while (rep <13){
-//   console.log('still positive! current number:${rep}')
-//   rep++
-//}
-
-// let diceVal= math.random()10;
-// console.log(diceVal);*/
 
 function addHistory(num){
     let li = document.createElement("li");
