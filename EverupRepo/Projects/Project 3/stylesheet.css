@@ -1,0 +1,85 @@
+body{
+    background-color: #D1B271;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 4% 0%;
+}
+.top{
+    text-shadow: 2px 2px lightslategray;
+    text-align: center;
+}
+.submitBox{
+    background-color: lightpink;
+    width: 80%;
+    margin: 0% auto;
+    border-radius: 20px;
+    padding: 2% 0;
+}
+.score{
+    float: left;
+    width: 25%;
+    border: 2px solid;
+    text-align: center;
+    border-radius: 5px;
+    background-color: lightgray;
+    max-width: 130px;
+    min-width: 114.88px;
+}
+
+.reset{
+    float: right;
+    width: 25%;
+    border: 2px solid;
+    background-color: lightgray;
+    max-width: 130px;
+}
+
+.flic{
+    display:block; 
+    margin: 0% auto; 
+    height: 100%;
+    width: 100%;
+    min-width: 100px; 
+    max-width: 127.05px;
+    min-height: 100.35px;
+    max-height: 174.81px;
+}
+
+.history{
+    display: block;
+    margin: 0 20%;
+    max-width: 800px;
+    background-color: lightgray;
+    border-radius: 5px;
+    border: 2px solid;
+    font-size: 140%;
+}
+
+.userInput{
+    display: block; 
+    margin: 25px auto; 
+    width: 25%;
+    text-align: center;
+    height: 50%;
+    border-radius: 10px;
+    border: 2px solid;
+    min-width: 167.34px;
+}
+
+.submit{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: green;
+    display: block; 
+    margin: 0 auto; 
+    width: 25%;
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 167.34px;
+    max-width: 167.34px;
+}
+.submit:hover{
+    color: white;
+    background-color: gray;
+}
