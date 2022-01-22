@@ -16,10 +16,10 @@
         
         <div class="card-header">
           <div class="score">
-            <p id="score">Score: 0</p>
+            <p id="score">Score: 10</p>
             <p id="high">High score: 0</p>
           </div>
-          <a href="" class="btn reset" style="display: block;">Reset</a>
+          <a class="btn reset" style="display: block;">Reset</a>
         </div>
 
         <div class="card-body">
@@ -28,11 +28,12 @@
                   <img src="homer.png" alt="" class="flic">
                 </div>
                 <div class="col-12">
-                  <input type="text" class="userInput">
+                  <input type="text" class="userInput" id="input">
                 </div>
                 <div class="col-12">
-                  <a href="" class="submit">Check</a>
+                  <a class="submit" id="submit" onclick="verify()">Check</a>
                 </div>
+                <p style="text-align: center;" id="output"></p>
             </div>
         </div>
 
@@ -43,6 +44,6 @@
         </div>
 
     </div>
-    <script src="script.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>

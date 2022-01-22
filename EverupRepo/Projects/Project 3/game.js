@@ -1,39 +1,50 @@
-let rep =10;
-var number = Math.ceil(Math.random() * 100);
 let ul = document.getElementById("history");
+let rep = 10;
+let number = Math.ceil(Math.random() * 100);
+//for testing purposes, delete before submitting
+console.log(number);
+let wrongs = 0;
+let output = document.getElementById('output');
+let score = document.getElementById('score');
+
 
 function verify() {
-    var guess = Number(this.elements.guess.value),
-        output = document.getElementById('output');
-    var score=0;
-    var counter = document.getElementById("Counter");
+    let guess = Number(document.getElementById('input').value);
+
 
     if (isNaN(guess)) {
         output.innerHTML = 'Enter a number.';
     } else if (number === guess) {
-        score++;
-        counter.innerHTML="Your Score increased by"+score+"game";
-        output.innerHTML = 'You guessed right!';
+        output.textContent ='You guessed right!';
     } else if (guess > 100) {
-        output.innerHTML = 'Your guess is out of the 1 to 100 range.';
+        wrongs +=1;
+        score.innerHTML = `Score = ${10 - wrongs}`;
+        output.textContent = 'Your guess is out of the 1 to 100 range.';
+        addHistory(guess);
     } else if (guess > number) {
-        output.innerHTML = 'You\'re getting warmer.';
+        wrongs += 1;
+        score.innerHTML = `Score = ${10 - wrongs}`;
+        output.textContent = 'You\'re getting warmer.';
+        addHistory(guess);
     } else if (guess < number) {
-        output.innerHTML = 'You\'re getting cold.';
+        wrongs += 1;
+        score.innerHTML = `Score = ${10 - wrongs}`;
+        output.textContent = 'You\'re getting cold.';
+        addHistory(guess);
     }
     return false;
 }
 
-document.getElementById('guessNumber').onsubmit = verify;
+// document.getElementById('guessNumber').onsubmit = verify;
 
-location.reload();
-/*while (rep <13){
-  console.log('still positive! current number:${rep}')
-  rep++
-}
+// location.reload();
+// /while (rep <13){
+//   console.log('still positive! current number:${rep}')
+//   rep++
+//}
 
-let diceVal= math.random()*10;
-console.log(diceVal);*/
+// let diceVal= math.random()10;
+// console.log(diceVal);*/
 
 function addHistory(num){
     let li = document.createElement("li");
