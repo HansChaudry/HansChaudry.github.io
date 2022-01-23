@@ -76,7 +76,7 @@ function replay(){
     main.style.display = 'flex';
     lose.style.display = 'none';
     win.style.display = 'none'
-    output.innerHTML = '';
+    output.innerHTML = 'Guess a Number';
     wrongs = 0;
     number = Math.ceil(Math.random() * 100);
     console.log(`new num ${number}`);
