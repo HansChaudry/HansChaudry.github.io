@@ -53,9 +53,11 @@
               <div class="col-7 justify-content-center">
                 <img src="IMGs/youWin.gif" alt="" class="flic">
               </div>
-              <div class="col-12 message">
-                <h3>CONGRATULATIONS</h3>
-                You're guess was correct. <span id="secret">41</span> is my secret  number.
+              <div class="col-12 message" id="winMessage">
+                <h4>CONGRATULATIONS</h4>
+                You're guess was correct. <span id="secret"></span> was my secret  number.<br>
+                <span id="yourScore"></span> <br>
+                <span id="best"></span>
               </div>
               <div class="col-12">
                 <a class="submit" id="submit" onclick="replay()">Play Again</a>
@@ -71,7 +73,7 @@
       </div>
     </div>
 
-    <!-- YOU WIN -->
+    <!-- YOU LOSE -->
     <div class="card w-75 m-auto loseCard" id="lose">
         
       <div class="card-header">
@@ -90,7 +92,7 @@
                 <div class="col-12 message">
                   <h5>Unfortunately You Lost the Game</h5>
                   Don't give up and Try Again. You can win next time. <br>
-                  My number was: <span class="secret"></span>
+                  My number was: <span id="lost"></span>
                 </div>
               </div>
               <div class="col-12">

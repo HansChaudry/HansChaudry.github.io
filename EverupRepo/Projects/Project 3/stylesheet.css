@@ -39,10 +39,10 @@ body{
     margin: 0% auto; 
     height: 100%;
     width: 100%;
-    min-width: 100px; 
-    max-width: 127.05px;
-    min-height: 100.35px;
-    max-height: 174.81px;
+    min-width: 140px; 
+    max-width: 300px;
+    min-height: 100px;
+    max-height: 180px;
 }
 
 .history{
@@ -102,4 +102,9 @@ body{
 
 .message{
     text-align: center;
+}
+
+#secret{
+    font-weight: bold;
+    font-size: 140%;
 }
