@@ -1,21 +1,19 @@
-//Elements that will be eddited 
+//Elements with mutiple instances
 let ul = document.getElementsByClassName('history');
 let scoreTables = document.getElementsByClassName('points');
 let highScores = document.getElementsByClassName('high');
+//Other Elements that will be edited
 let output = document.getElementById('output');
-let score = document.getElementById('score');
 let main = document.getElementById('main');
 let lose = document.getElementById('lose');
 let win = document.getElementById('win');
-
 //global variables
 let number = Math.ceil(Math.random() * 100);
-//for testing purposes, delete before submitting
-console.log(number);
 let wrongs = 0;
 let high = 0;
 
 
+//MAIN FUNCTION
 function check() {
     let input = Number(document.getElementById('input').value);
 
@@ -106,3 +104,6 @@ function wrongNumber(x){
     updateScore();
     addHistory(x);
 }
+
+//secret clue
+console.log(number);

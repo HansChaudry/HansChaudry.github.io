@@ -20,7 +20,7 @@
             <p class="points">Score = 10</p>
             <p class="high">High score = 0</p>
           </div>
-          <a class="btn reset" style="display: block;">Reset</a>
+          <a class="btn reset" style="display: block;" onclick="replay()" title="Changes score back to 10 and generates a new number to guess">Reset</a>
         </div>
 
         <div class="card-body">
@@ -32,7 +32,7 @@
                   <input type="text" class="userInput" id="input">
                 </div>
                 <div class="col-12">
-                  <a class="submit" id="submit" onclick="check()">Check</a>
+                  <a class="submit" id="submit" onclick="check()" title="If the number you input is wrong you will lose a point">Check</a>
                 </div>
                 <p style="text-align: center;" id="output"></p>
             </div>
