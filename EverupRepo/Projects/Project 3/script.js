@@ -1,16 +1,16 @@
 //Elements with mutiple instances
-let ul = document.getElementsByClassName('history');
-let scoreTables = document.getElementsByClassName('points');
-let highScores = document.getElementsByClassName('high');
+let ul = document.getElementsByClassName('history')
+    ,scoreTables = document.getElementsByClassName('points')
+    ,highScores = document.getElementsByClassName('high')
 //Other Elements that will be edited
-let output = document.getElementById('output');
-let main = document.getElementById('main');
-let lose = document.getElementById('lose');
-let win = document.getElementById('win');
+    ,output = document.getElementById('output')
+    ,main = document.getElementById('main')
+    ,lose = document.getElementById('lose')
+    ,win = document.getElementById('win')
 //global variables
-let number = Math.ceil(Math.random() * 100);
-let wrongs = 0;
-let high = 0;
+    ,number = Math.ceil(Math.random() * 100)
+    ,wrongs = 0
+    ,high = 0;
 
 
 //MAIN FUNCTION
@@ -83,6 +83,10 @@ function replay(){
     updateScore();
     clearHistory();
 }
+
+let wonAudio = Audio('audio_.mp3')
+    ,lostAudio = Audio('audio_file.mp3')
+    ,wrongAudio = Audio('audio_file.mp3');
 
 function switchToLose(){
     main.style.display = 'none';

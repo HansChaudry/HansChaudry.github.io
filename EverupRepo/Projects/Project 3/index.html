@@ -4,14 +4,24 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
  <title>Help Homer</title>
  <link rel="icon" type="image/x-icon" href="IMGs/homer.png">
+
  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
  <link rel="stylesheet" href="stylesheet.css">
 </head>
+
+
 <body>
- <h1 class="top"> Help Homer Guess My Number</h1>
- <h6 style="text-align: center;">The number is between 1 and 100</h6>
+ <h1 class="top"> 
+  <span style="--i:1">Help</span>
+  <span style="--i:2">Homer</span>
+  <span style="--i:3">Guess</span>
+  <span style="--i:4">MY</span>
+  <span style="--i:5">Number</span>
+ </h1>
+ <h5 style="text-align: center;">The number is between 1 and 100</h5>
 
  <!-- Main Card  -->
  <div class="card w-75 m-auto gameCard" id="main">
@@ -43,7 +53,7 @@
 
      <!-- Main Card Footer -->
      <div class="card-footer justify-content-center">
-      <h4 style="margin-left: 20%;">Guess history</h4>
+      <h4 style="text-align: center;">Guess history</h4>
       <ul class="history" id="history">
       </ul>
      </div>
@@ -59,10 +69,10 @@
           <img src="IMGs/youWin.gif" alt="" class="flic">
         </div>
         <div class="col-12 message" id="winMessage">
-          <h4>CONGRATULATIONS</h4>
-          You're guess was correct. <span id="secret"></span> was my secret  number.<br>
-          <span id="yourScore"></span> <br>
-          <span id="best"></span>
+          <br><h4>CONGRATULATIONS</h4>
+          You're guess was correct. <span id="secret"></span> was my secret  number.<br><br>
+          <span id="yourScore"></span><br>
+          <span id="best"></span><br><br>
         </div>
         <div class="col-12">
           <a class="submit" id="submit" onclick="replay()">Play Again</a>
@@ -73,7 +83,7 @@
 
    <!-- Win Card Footer -->
    <div class="card-footer justify-content-center">
-       <h4 style="margin-left: 20%;">Guess history</h4>
+       <h4 style="text-align: center;">Guess history</h4>
        <ul class="history" id="history2">
        </ul>
    </div>
@@ -116,7 +126,7 @@
 
    <!-- Lose Card Footer -->
    <div class="card-footer justify-content-center">
-       <h4 style="margin-left: 20%;">Guess history</h4>
+       <h4 style="text-align: center;">Guess history</h4>
        <ul class="history" id="history">
        </ul>
    </div>

@@ -1,12 +1,23 @@
 body{
     background-color: #D1B271;
-    font-family: "Comic Sans MS", "Comic Sans";
+    font-family: Comic Sans MS, Comic Sans;
     margin: 4% 0%;
 }
 .top{
     text-shadow: 2px 2px lightslategray;
     text-align: center;
+    animation: colorChange 4s  .4s linear infinite;
+    transition: animation ;
 }
+
+.top span{
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    animation: waviy 1s infinite;
+    animation-delay: calc(.1s * var(--i));
+}
+
 .submitBox{
     background-color: #F14E28;
     width: 80%;
@@ -29,8 +40,8 @@ body{
     float: right;
     width: 25%;
     border: 2px solid;
-    background-color: #424F46;
-    color: white;
+    background-color: #FED41D;
+    color: black;
     max-width: 150px;
 }
 
@@ -70,9 +81,9 @@ body{
     display: block;
     text-align: center;
     text-decoration: none;
-    color: white;
+    color: black;
     border: 2px solid;
-    background-color: #424F46;
+    background-color: #FED41D;
     display: block; 
     margin: 0 auto; 
     width: 25%;
@@ -107,4 +118,24 @@ body{
 #secret{
     font-weight: bold;
     font-size: 140%;
+}
+
+#yourScore{
+    font-size: 140%;
+}
+
+@keyframes colorChange {
+    0%{color: black;}
+    33.3%{color: #70D1FE;}
+    66.6%{color: black;}
+    100%{color: #F14E28;}
+}
+
+@keyframes waviy {
+    0%,30%,100% {
+      transform: translateY(0)
+    }
+    20% {
+      transform: translateY(-20px)
+    }
 }
