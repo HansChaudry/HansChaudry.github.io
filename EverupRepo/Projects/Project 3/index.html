@@ -12,12 +12,13 @@
     <h1 class="top">Guess my number</h1>
     <h6 style="text-align: center;">number is between 1 and 100</h6>
 
-    <div class="card w-75 m-auto" style="background-color: lightblue;">
+    <!-- Main Card  -->
+    <div class="card w-75 m-auto gameCard" id="main">
         
         <div class="card-header">
           <div class="score">
-            <p id="score">Score: 10</p>
-            <p id="high">High score: 0</p>
+            <p class="points">Score = 10</p>
+            <p class="high">High score = 0</p>
           </div>
           <a class="btn reset" style="display: block;">Reset</a>
         </div>
@@ -31,7 +32,7 @@
                   <input type="text" class="userInput" id="input">
                 </div>
                 <div class="col-12">
-                  <a class="submit" id="submit" onclick="verify()">Check</a>
+                  <a class="submit" id="submit" onclick="check()">Check</a>
                 </div>
                 <p style="text-align: center;" id="output"></p>
             </div>
@@ -42,7 +43,68 @@
             <ul class="history" id="history">
             </ul>
         </div>
+    </div>
 
+    <!-- YOU WIN -->
+    <div class="card w-75 m-auto winCard" id="win">
+
+      <div class="card-body">
+          <div class="row justify-content-center submitBox">
+              <div class="col-7 justify-content-center">
+                <img src="youWin.gif" alt="" class="flic">
+              </div>
+              <div class="col-12 message">
+                <h3>CONGRATULATIONS</h3>
+                You're guess was correct. <span id="secret">41</span> is my secret  number.
+              </div>
+              <div class="col-12">
+                <a class="submit" id="submit" onclick="replay()">Play Again</a>
+              </div>
+              <p style="text-align: center;" id="output"></p>
+          </div>
+      </div>
+
+      <div class="card-footer justify-content-center">
+          <h4 style="margin-left: 20%;">Guess history</h4>
+          <ul class="history" id="history2">
+          </ul>
+      </div>
+    </div>
+
+    <!-- YOU WIN -->
+    <div class="card w-75 m-auto loseCard" id="lose">
+        
+      <div class="card-header">
+        <div class="score">
+          <p class="points">Score = 10</p>
+          <p class="high">High score = 0</p>
+        </div>
+      </div>
+
+      <div class="card-body">
+          <div class="row justify-content-center submitBox">
+              <div class="col-7 justify-content-center">
+                <img src="youLost.gif" alt="" class="flic">
+              </div>
+              <div class="col-12">
+                <div class="col-12 message">
+                  <h5>Unfortunately You Lost the Game</h5>
+                  Don't give up and Try Again. You can win next time. <br>
+                  My number was: <span class="secret"></span>
+                </div>
+              </div>
+              <div class="col-12">
+                <a class="submit" id="submit" onclick="replay()">Try Again</a>
+              </div>
+              <p style="text-align: center;" id="output"></p>
+          </div>
+      </div>
+
+      <div class="card-footer justify-content-center">
+          <h4 style="margin-left: 20%;">Guess history</h4>
+          <ul class="history" id="history">
+          </ul>
+      </div>
     </div>
     <script src="game.js"></script>
 </body>
