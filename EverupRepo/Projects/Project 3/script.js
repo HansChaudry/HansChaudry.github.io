@@ -84,14 +84,15 @@ function replay(){
     clearHistory();
 }
 
-let wonAudio = Audio('audio_.mp3')
-    ,lostAudio = Audio('audio_file.mp3')
-    ,wrongAudio = Audio('audio_file.mp3');
+let wonAudio = new Audio('sounds/homer-woohoo.mp3')
+    ,lostAudio = new Audio('sounds/homerCrying.mp3')
+    ,wrongAudio = new Audio('sounds/doh.mp3');
 
 function switchToLose(){
     main.style.display = 'none';
     lose.style.display = 'flex';
     document.getElementById('lost').textContent = `${number}`;
+    lostAudio.play();
 }
 
 function switchToWin(){
@@ -101,12 +102,14 @@ function switchToWin(){
     document.getElementById('secret').textContent = `${number}`;
     document.getElementById('yourScore').textContent = `Your Score = ${10-wrongs}`;
     document.getElementById('best').textContent = `Best = ${high}`;
+    wonAudio.play();
 }
 
 function wrongNumber(x){
     wrongs +=1;
     updateScore();
     addHistory(x);
+    wrongAudio.play();
 }
 
 //secret clue
