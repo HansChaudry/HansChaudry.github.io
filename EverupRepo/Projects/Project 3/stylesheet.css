@@ -14,7 +14,7 @@ body{
     position: relative;
     display: inline-block;
     text-transform: uppercase;
-    animation: waviy 1s infinite;
+    animation: upDown 1s infinite;
     animation-delay: calc(.1s * var(--i));
 }
 
@@ -131,7 +131,7 @@ body{
     100%{color: #F14E28;}
 }
 
-@keyframes waviy {
+@keyframes upDown {
     0%,30%,100% {
       transform: translateY(0)
     }

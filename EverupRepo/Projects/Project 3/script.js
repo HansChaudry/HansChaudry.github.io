@@ -19,14 +19,17 @@ function check() {
 
     if (isNaN(input)) {
         output.innerHTML = 'Enter a number.';
+        document.getElementById('input').value = '';
     }
     
     else if (input === number) {
         switchToWin()
+        document.getElementById('input').value = '';
     } 
     
     else if (input > 100 || input > number || input < number) {
         wrongNumber(input);
+        document.getElementById('input').value = '';
         if(wrongs === 10){
             switchToLose()
         }
@@ -111,6 +114,3 @@ function wrongNumber(x){
     addHistory(x);
     wrongAudio.play();
 }
-
-//secret clue
-console.log(number);
