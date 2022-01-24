@@ -4,18 +4,21 @@ body{
     margin: 4% 0%;
 }
 .top{
-    text-shadow: 2px 2px lightslategray;
+    text-shadow: 0px 2px lightslategray;
     text-align: center;
     animation: colorChange 4s  .4s linear infinite;
     transition: animation ;
 }
 
-.top span{
+#second, #first{
     position: relative;
     display: inline-block;
     text-transform: uppercase;
-    animation: upDown 1s infinite;
-    animation-delay: calc(.1s * var(--i));
+    animation: upDown 2s 1s infinite;
+}
+
+#first{
+    animation: upDown 2s .5s infinite;
 }
 
 .submitBox{
@@ -124,6 +127,10 @@ body{
     font-size: 140%;
 }
 
+.card-body h5{
+    animation: colorChange 4s  .4s linear infinite;
+}
+
 @keyframes colorChange {
     0%{color: black;}
     33.3%{color: #70D1FE;}
@@ -136,6 +143,7 @@ body{
       transform: translateY(0)
     }
     20% {
-      transform: translateY(-20px)
+      transform: translateY(-30px);
+      text-shadow: 0px 20px lightslategray;
     }
 }
