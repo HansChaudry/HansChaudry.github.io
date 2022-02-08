@@ -1,0 +1,125 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Supermercado One;
+}
+
+.grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template:
+    "nav nav nav" 100px
+    "mid mid mid" 50%
+    "footer footer footer"
+    /1fr;
+    gap: 20px;
+}
+
+.grid-item{
+    background-color: lightgray;
+    border: 4px solid orange;
+    display: grid;
+}
+
+.nav-container{
+    grid-area: nav;
+    background-color: lightgray;
+    text-align: center;
+}
+
+.page-body{
+    grid-area: mid;
+}
+
+.page-footer{
+    grid-area: footer;
+}
+
+.intro-container{
+    font-size: 25px;
+    width: 90%;
+    justify-self: center;
+    border: 3px solid;
+    display: grid;
+    border-radius: 20px;
+    grid-template:
+    "portrait bio" 1fr
+    /50% 50%;
+    padding: 2%;
+}
+
+
+.myPic{
+    height: 60%;
+    width: 60%;
+    max-width: 382px;
+    grid-area: portrait;
+    justify-self: center;
+    align-self: center;
+    border-radius: 50%;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
+    animation: shadow 2s linear infinite;
+    /*box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;*/
+}
+.bio{
+    grid-column: 2/3;
+    height: 100%;
+    grid-area: bio;
+    overflow: auto;
+}
+
+@keyframes shadow {
+    0%{box-shadow: 0 6px 20px 0 rgba(0, 0, 255, 1)}
+    50%{box-shadow: 0 6px 20px 0 rgba(0, 255, 0, 1)}
+    100%{box-shadow: 0 6px 20px 0 rgba(255, 0, 0, 1)}
+}
+
+.nav{
+    display: flex;
+    list-style: none;
+}
+
+.nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    justify-self: center;
+    align-self: center;
+}
+
+.nav li{
+    float: left;
+}
+
+.nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav-brand{
+    float: left;
+    display: block;
+}
+
+.navbar li a:hover {
+    background-color: #111;
+}
+
+span:before{
+    content: 'Hi there. My name is Hans Chaudry';
+    animation: binary 4s 1s infinite linear;
+}
+
+@keyframes binary {
+    0%{content: 'Hi there. My name is Hans Chaudry'}
+
+    100%{content: '01001000 01101001 00100000 01110100 01101000 01100101 01110010 01100101 00101110 00100000 01001101 01111001 00100000 01101110 01100001 01101101 01100101 00100000 01101001 01110011 00100000 01001000 01100001 01101110 01110011 00100000 01000011 01101000 01100001 01110101 01100100 01110010 01111001 00101110 ';}
+}
