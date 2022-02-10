@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-family: Supermercado One;
+}
+
+.grid-container{
+    height: 100vh;
+    display: grid;
+    grid-template:
+    "nav nav"50px
+    "search game"100px
+    "footer footer"50px
+    /.5fr .5fr;
+    gap: 20px;
+}
+
+.grid-item{
+    background-color: lightgray;
+    border: 4px solid orange;
+    display: grid;
+    padding: 1%;
+}
+
+.nav-container{
+    grid-area: nav;
+    background-color: white;
+    border: none;
+    background-color: lightpink;
+}
+
+.search-body{
+    grid-area: search;
+    font-size: 25px;
+}
+
+.game-body{
+    grid-area: game;
+}
+
+.page-footer{
+    grid-area: footer;
+}
+
+#searchWord{
+    width: 40%;
+    height: 100%;
+    display: inline;
+    /*align-self: center;*/
+    /*justify-self: center;*/
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#gameButton{
+    justify-self: center;
+    align-self: center;
+    width: 60%;
+    height: 60%;
+    font-size: 18px;
+    border: 4px solid gray;
+    border-radius: 15px;
+}
+
+#gameButton:hover{
+    background-color: darkgray;
+    animation: pulse .5s infinite linear;
+}
+
+@keyframes pulse{
+    0%{}
+    25%{box-shadow: 5px 10px 5px 0px rgb(255, 0, 0); border-color: black}
+    50%{box-shadow: 5px 10px 10px 0px rgb(0, 255, 0); border-color: black}
+    100%{box-shadow: 5px 10px 20px 0px rgb(0, 0, 255); border-color: black}
+}
