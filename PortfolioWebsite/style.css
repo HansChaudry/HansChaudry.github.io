@@ -1,70 +1,106 @@
 body{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-size: 18px;
     font-family: Supermercado One;
 }
 
-.grid-container{
+.container{
+    position: relative;
+    width: 100%;
     height: 100vh;
-    display: grid;
-    grid-template:
-    "nav nav nav"10%
-    "mid mid mid"
-    "footer footer footer"10%
-    /1fr;
-    gap: 20px;
+    overflow: auto;
+    scroll-snap-type: y mandatory;
 }
 
-.grid-item{
-    background-color: lightgray;
-    border: 4px solid orange;
+.container .section{
+    position: relative;
+    height: 100%;
     display: grid;
+    scroll-snap-align: start;
+    background-blend-mode: multiply;
 }
 
-.nav-container{
-    grid-area: nav;
-    background-color: white;
-    border: none;
-    background-color: lightpink;
+.container .section h2{
+    background: #fff;
+    color: #111;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 2em;
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    height: 5%;
 }
+
+.container .section p{
+    background: #fff;
+    color: #111;
+    font-weight: 300;
+    font-size: 40px;
+    padding: 10px 20px;
+    height: 20%;
+    align-self: center;
+}
+
+
+.container .section:nth-child(1){
+    background: url("num1.jpg") fixed;
+    background-size: cover;
+}
+
+.container .section:nth-child(2){
+    background: url("num2.jpg") fixed;
+    background-size: cover;
+}
+
+.container .section:nth-child(3){
+    background: url("num3.jpg") fixed;
+    background-size: cover;
+}
+
+.container .section:nth-child(4){
+    background: url("num4.jpg") fixed;
+    background-size: cover;
+}
+
+.container .section:nth-child(5){
+    background: url("num5.jpg") fixed;
+    background-size: cover;
+}
+
+
+
 
 .page-body{
     grid-area: mid;
 }
 
-.page-footer{
-    grid-area: footer;
-}
 
 .intro-container{
     font-size: 25px;
-    width: 90%;
-    height: 70%;
+    width: 55%;
+    height: 50%;
     min-width: 500px;
+    justify-items: center;
+    align-items: center;
     justify-self: center;
-    border: 3px solid;
+    align-self: center;
     display: grid;
     border-radius: 20px;
     grid-template:
     "portrait bio"
-    /50% 50%;
+    /40% 60%;
     padding: 2%;
     overflow: hidden;
+    background-color: lightgray;
 }
 
 .myPic{
-    height: 60%;
-    width: 60%;
-    max-width: 382px;
+    height: 100%;
+    width: 90%;
     grid-area: portrait;
-    justify-self: center;
-    border-radius: 50%;
     border: none;
     box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
-    animation: shadow 2s linear infinite;
-    /*box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;*/
 }
 .bio{
     grid-column: 2/3;
@@ -72,19 +108,32 @@ body{
     overflow: auto;
 }
 
-@keyframes shadow {
-    0%{box-shadow: 0 6px 20px 0 rgba(0, 0, 255, 1)}
-    50%{box-shadow: 0 6px 20px 0 rgba(0, 255, 0, 1)}
-    100%{box-shadow: 0 6px 20px 0 rgba(255, 0, 0, 1)}
-}
+
 
 .message:before{
-    content: 'Hi there. My name is Hans Chaudry';
+    content: 'Hi there. My name is Hans';
+    font-size: 50px;
     animation: binary 4s 1s infinite linear;
+    display: block;
 }
 
 @keyframes binary {
-    0%{content: 'Hi there. My name is Hans Chaudry'}
+    0%{
+        content: 'print(\'Hello World! I am Hans\')';
+        font-size: 45px;
+    }
 
-    100%{content: '01001000 01101001 00100000 01110100 01101000 01100101 01110010 01100101 00101110 00100000 01001101 01111001 00100000 01101110 01100001 01101101 01100101 00100000 01101001 01110011 00100000 01001000 01100001 01101110 01110011 00100000 01000011 01101000 01100001 01110101 01100100 01110010 01111001 00101110 ';}
+    49%{
+        content: 'print(\'Hello World! I am Hans\')';
+        font-size: 45px;
+    }
+    50%{
+        content: '01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001';
+        font-size: 35px;
+    }
+
+    100%{
+        content: '01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001';
+        font-size: 35px;
+    }
 }
