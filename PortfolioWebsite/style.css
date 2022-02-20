@@ -33,10 +33,9 @@ body{
 }
 
 .container .section p{
-    background: #fff;
     color: #111;
     font-weight: 300;
-    font-size: 40px;
+    font-size: 2em;
     padding: 10px 20px;
     height: 20%;
     align-self: center;
@@ -76,7 +75,7 @@ body{
 }
 
 
-.intro-container{
+.intro-container, .AboutMe-container,.Education-container,.Projects-container{
     font-size: 25px;
     width: 55%;
     height: 50%;
@@ -92,7 +91,7 @@ body{
     /40% 60%;
     padding: 2%;
     overflow: hidden;
-    background-color: lightgray;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 .myPic{
@@ -103,7 +102,6 @@ body{
     box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
 }
 .bio{
-    grid-column: 2/3;
     grid-area: bio;
     overflow: auto;
 }
@@ -136,4 +134,104 @@ body{
         content: '01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001';
         font-size: 35px;
     }
+}
+
+
+.AboutMe-container{ 
+    grid-template:
+    "header header"14%
+    "pictures para"
+    /40% 60%;
+}
+
+.title{
+    grid-area: header;
+    border: none;
+    font-size: 50px;
+}
+
+.slideshow{
+    height: 100%;
+    width: 90%;
+    grid-area: pictures;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
+}
+
+.para{
+    height: 100%;
+    width: 90%;
+    grid-area: para;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
+    color: white;
+    background-color: black;
+    padding: 2%;
+}
+
+.Education-container{
+    grid-template:
+    "header"14%
+    "edu_info"
+    /1fr;
+    gap: 5px;
+}
+
+.Education-container .para{
+    height: 100%;
+    width: 90%;
+    grid-area: edu_info;
+    border: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
+    color: white;
+    background-color: black;
+    padding: 2%;
+}
+
+.Projects-container{
+    width: 70%;
+    height: 50%;
+    grid-template:
+    "project1 project2 project3"1fr
+    /32% 32% 32%;
+    gap: 2%;
+    background-color: rgba(255, 255, 255, .6);
+}
+
+.projCard{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    border: 3px solid;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.Projects-container .projCard:nth-child(1){
+    grid-area: project1;
+    float: left;
+    background: url("homer.png");
+    background-size: cover;
+    opacity: 1;
+    background-color: #F14E28;
+}
+
+.Projects-container .projCard:nth-child(2){
+    grid-area: project2;
+}
+.Projects-container .projCard:nth-child(3){
+    grid-area: project3;
+    float: right;
+}
+
+.projName{
+    font-size: 30px;
+    position: absolute;
+    bottom: 0%;
+    background: white;
+    width: 100%;
+    height: 10%;
+    border-radius: 15px;
+    text-align: center;
 }
