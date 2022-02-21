@@ -71,77 +71,77 @@ body{
 
 .intro-container, .AboutMe-container,.Education-container,.Projects-container{
     font-size: 150%;
-    width: 65%;
-    height: 80%;
-    min-width: 700px;
-    min-height: 370px;
+    width: 70%;
     justify-items: center;
     align-items: center;
     justify-self: center;
     align-self: center;
     display: grid;
     border-radius: 20px;
-    grid-template:
-    "portrait bio"
-    /40% 60%;
     padding: 2%;
     overflow: hidden;
     background-color: rgba(255, 255, 255, 0.6);
 }
 
-.intro-container{
-    height: 65%;
-}
-
 .myPic{
-    height: 100%;
-    width: 90%;
+    /* height: 37.5%;
+    width: 50%; */
     grid-area: portrait;
     border: none;
-    box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
 }
 .bio{
-    grid-area: bio;
-    overflow: auto;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
+.intro-container{
+    background: url("portPicture.png");
+    background-size:contain;
+    background-position:center;
+    background-repeat: no-repeat;
+    height: 60%;
+}
 
 
 .message:before{
-    content: 'Hi there. My name is Hans';
-    font-size: 120%;
-    animation: binary 4s 1s infinite linear;
+    content: 'print(\'Hello World! I am Hans\')';
+    font-size: 1.5em;
+    /* animation: binary 4s 1s infinite linear; */
     display: block;
+    text-align: center;
 }
 
-@keyframes binary {
+/* @keyframes binary {
     0%{
         content: 'print(\'Hello World! I am Hans\')';
-        font-size: 120%;
     }
 
     49%{
         content: 'print(\'Hello World! I am Hans\')';
-        font-size: 120%;
     }
     50%{
         content: '01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001';
-        font-size: 120%;
     }
 
     100%{
         content: '01001000 01100101 01101100 01101100 01101111 00100000 01010111 01101111 01110010 01101100 01100100 00100001';
-        font-size: 120%;
     }
-}
+} */
 
 
 .AboutMe-container{
-    height: 65%;
     grid-template:
     "header header"14%
     "pictures para"
-    /40% 60%;
+    /50% 50%;
+
+    font-size: 2em;
+    height: auto;
+    width: 100%;
+    min-height: 50%;
+    box-sizing: border-box;
 }
 
 .title{
@@ -151,22 +151,23 @@ body{
 }
 
 .slideshow{
-    height: 100%;
     width: 90%;
+    height: 80%;
     grid-area: pictures;
     border: none;
     box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
 }
 
 .para{
-    height: 100%;
     width: 90%;
+    height: 80%;
     grid-area: para;
     border: none;
     box-shadow: 0 6px 20px rgba(0, 0, 255, 1);
     color: white;
     background-color: black;
     padding: 2%;
+    box-sizing: content-box;
 }
 
 .Education-container{
@@ -246,4 +247,45 @@ body{
     height: 10%;
     border-radius: 15px;
     text-align: center;
+}
+
+
+.stage{
+    width: 100%;
+    height: 50%;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 0%;
+}
+
+.slidegroup{
+    width: 300%;
+    height:100%;
+    animation: slide 15s 3s infinite;
+}
+
+.slide{
+    width: 33.333%;
+    height: 100%;
+    float: left;
+}
+
+.s1,.s2,.s3{
+    background-color: #3b4d61;
+    color: white;
+    background: url("demoIMG1.PNG");
+    background-size:cover;
+    background-position:center;
+    background-repeat: no-repeat;
+}
+
+@keyframes slide{
+    0%{margin-left: 0%;}
+
+    33.333%{margin-left: -100%;}
+
+    66.666%{margin-left: -200%;}
+    
+    100%{margin-left: 0%;}
 }
