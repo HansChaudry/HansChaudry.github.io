@@ -44,8 +44,8 @@ body{
 
 
 .container .section:nth-child(1){
-    background: url("num1.jpg") fixed;
-    background-size: cover;
+    background: #556 url("num1.jpg") center;
+    background-size: contain;
 }
 
 .container .section:nth-child(2){
@@ -104,9 +104,14 @@ body{
     height: 60%;
 }
 
+.message{
+    font-size: 1em;
+    display: block;
+    text-align: center;
+}
 
 .message:before{
-    content: 'print(\'Hello World! I am Hans\')';
+    /* content: 'print(\'Hello World! I am Hans\')'; */
     font-size: 1.5em;
     /* animation: binary 4s 1s infinite linear; */
     display: block;
