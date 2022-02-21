@@ -69,13 +69,6 @@ body{
 }
 
 
-
-
-.page-body{
-    grid-area: mid;
-}
-
-
 .intro-container, .AboutMe-container,.Education-container,.Projects-container{
     font-size: 150%;
     width: 65%;
