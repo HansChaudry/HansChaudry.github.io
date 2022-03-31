@@ -83,7 +83,7 @@ class MainFrame(wx.Frame):
 
 def main():
     app = wx.App()
-    MainFrame(None, title="Practice")
+    MainFrame(None, title="YouTube Downloader")
     app.MainLoop()
 
 
