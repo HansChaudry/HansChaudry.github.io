@@ -25,27 +25,29 @@
                 <a href="{{url_for('index')}}" class="btn btn-primary">Try another</a>
             </form>
         </div>
-        <div class="form-group d-flex justify-content-start">
-            <section class="col-3">
-                <label for="gender">Gender:</label>
-                <select name="gender" class="form-control w-100">
-                    <option value="S">Select</option>
-                    <option value="M">Male</option>
-                    <option value="F">Female</option>
-                </select>
-            </section>
-            <section class="col-4">
-                <label for="country">Country:</label>
-                <select name="country" class="form-control w-100">
-                    <option value="S">Select</option>
-                    <option value="US">United States</option>
-                    <option value="CAN">Canada</option>
-                </select>
-            </section>
-        </div>
-
-        <form action="{{url_for('speak')}}" method="POST">
-            <button class="btn btn-primary">Read it to me!</button>
+        <form action="/speech" method="POST">
+            <div class="form-group d-flex justify-content-start">
+                <section class="col-3">
+                    <label for="gender">Gender:</label>
+                    <select name="gender" class="form-control w-100">
+                        <option value="Select">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </select>
+                </section>
+                <section class="col-4">
+                    <label for="country">Country:</label>
+                    <select name="country" class="form-control w-100">
+                        <option value="Select">Select</option>
+                        {% for country in countries %}
+                            <option value="{{country}}">{{country}}</option>
+                        {% endfor %}
+                    </select>
+                </section>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-primary">Read it to me!</button>
+            </div>
         </form>
     </div>
 </body>

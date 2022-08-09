@@ -29,6 +29,9 @@
                         <option value="fil">Filipino</option>
                         <option value="ar">Arabic</option>
                         <option value="bn">Bangla</option>
+                        {% for i in range(0, len(languages)) %}
+                            <option value="{{languages[i][0]}}">{{languages[i][1]}}</option>
+                        {% endfor %}
                     </select>
                 </div>
                 <div>

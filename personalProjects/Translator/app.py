@@ -3,7 +3,7 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 import azure.cognitiveservices.speech as speechsdk
-from voice import findVoice
+from voice import findVoice, findCountries
 
 app = Flask(__name__)
 
@@ -13,7 +13,7 @@ def index():
 
 @app.route('/translation', methods=['POST'])
 def index_post():
-    global original_text, target_language, translated_text
+    global original_text, target_language, translated_text, countries
     # Read the values from the form
     original_text = request.form['text']
     target_language = request.form['language']
@@ -50,20 +50,26 @@ def index_post():
 
     # Call render template, passing the translated text,
     # original text, and target language to the template
+
+    countries = findCountries(target_language)
+
     return render_template(
         'results.html',
         translated_text=translated_text,
         original_text=original_text,
         target_language=target_language,
+        countries=countries
     )
 
 @app.route('/speech', methods=['POST'])
 def speak():
+    target_country = request.form.get('country')
+    target_gender = request.form.get('gender')
     key = os.environ['TTSKEY']
     # endpoint = os.environ['TTSENDPOINT']
     location = os.environ['LOCATION']
     speech_config = speechsdk.SpeechConfig(subscription=key, region=location)
-    speech_config.speech_synthesis_voice_name=findVoice(target_language)
+    speech_config.speech_synthesis_voice_name=findVoice(target_language, target_gender, target_country)
     audio_config = speechsdk.audio.AudioOutputConfig(use_default_speaker=True)
     speech_synthesizer = speechsdk.SpeechSynthesizer(speech_config=speech_config, audio_config=audio_config)
     text = translated_text
@@ -72,5 +78,6 @@ def speak():
         'results.html',
         translated_text=translated_text,
         original_text=original_text,
-        target_language=target_language
+        target_language=target_language,
+        countries=countries
     )

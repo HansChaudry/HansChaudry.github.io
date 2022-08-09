@@ -1,17 +1,19 @@
-from importlib.resources import contents
-import random, requests, os, json, urllib.request as urllib2
+import json, urllib.request as urllib2
+def findCountries(langcode:str)->list:
+    target_url = 'https://hanschaudry.github.io/personalProjects/Translator/voiceList.json'
+    response = urllib2.urlopen(target_url)
+    voices = json.loads(response.read())
 
+    values = []
 
-target_url = 'https://hanschaudry.github.io/personalProjects/Translator/voiceList.json'
-response = urllib2.urlopen(target_url)
-voices = json.loads(response.read())
+    for voice in voices:
+        if langcode in voice['Locale']:
+            country = voice['Language'].split(' ')[1:]
+            country = ' '.join(country)
+            if country not in values:
+                values.append(country)
 
-values = []
+    values.sort()
+    return values
 
-for voice in voices:
-    country = list(voice['Language'][1:])
-    if country not in values:
-        values.append(country)
-
-values.sort()
-print(values)
+print(findCountries('en'))
