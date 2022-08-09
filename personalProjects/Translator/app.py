@@ -3,13 +3,17 @@ import requests, os, uuid, json
 from dotenv import load_dotenv
 load_dotenv()
 import azure.cognitiveservices.speech as speechsdk
-from voice import findVoice, findCountries
+from voice import findVoice, findCountries, getLanguages
 
 app = Flask(__name__)
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    languages = getLanguages()
+    return render_template(
+        'index.html',
+        languages=languages
+    )
 
 @app.route('/translation', methods=['POST'])
 def index_post():

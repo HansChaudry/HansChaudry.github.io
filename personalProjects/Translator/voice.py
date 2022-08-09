@@ -33,3 +33,17 @@ def findCountries(langcode:str)->list:
 
     values.sort()
     return values
+
+def getLanguages():
+    target_url = 'https://hanschaudry.github.io/personalProjects/Translator/voiceList.json'
+    response = urllib2.urlopen(target_url)
+    voices = json.loads(response.read())
+
+    values = []
+
+    for voice in voices:
+        lang = [voice['Locale'].split('-')[0], voice['Language'].split(' ')[0]]
+        if lang not in values:
+            values.append(lang)
+    
+    return values

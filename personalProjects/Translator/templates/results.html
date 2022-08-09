@@ -5,29 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
         integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <title>Result</title>
+    <title">Result</title>
 </head>
 <body>
     <div class="container">
-        <h2>Results</h2>
-        <div>
+        <h2 style="text-align: center;">Results</h2>
+        <div style="text-align: center;">
             <strong>Original text:</strong> {{ original_text }}
         </div>
-        <div>
+        <div style="text-align: center;">
             <strong>Translated text:</strong> {{ translated_text }}
         </div>
-        <div>
+        <div style="text-align: center;">
             <strong>Target language code:</strong> {{ target_language }}
         </div>
-        <div>
+        <div style="text-align: center;">
             <!-- <a href="{{ url_for('index') }}">Try another one!</a> -->
             <form action="{{url_for('speak')}}" method="POST">
                 <a href="{{url_for('index')}}" class="btn btn-primary">Try another</a>
             </form>
         </div>
         <form action="/speech" method="POST">
-            <div class="form-group d-flex justify-content-start">
-                <section class="col-3">
+            <div class="form-group d-flex justify-content-center">
+                <section class="col-4">
                     <label for="gender">Gender:</label>
                     <select name="gender" class="form-control w-100">
                         <option value="Select">Select</option>
@@ -45,7 +45,7 @@
                     </select>
                 </section>
             </div>
-            <div>
+            <div style="text-align: center;">
                 <button type="submit" class="btn btn-primary">Read it to me!</button>
             </div>
         </form>
