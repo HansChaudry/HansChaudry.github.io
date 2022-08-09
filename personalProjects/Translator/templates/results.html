@@ -22,6 +22,9 @@
         <div>
             <a href="{{ url_for('index') }}">Try another one!</a>
         </div>
+        <form action="{{url_for('speak')}}" method="POST">
+            <button>Read it to me!</button>
+        </form>
     </div>
 </body>
 </html>
