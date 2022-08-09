@@ -1,1 +1,4 @@
 /personalProjects/Translator/.env
+/personalProjects/Translator/ttspeech.py
+convertcsv.csv
+test.py
