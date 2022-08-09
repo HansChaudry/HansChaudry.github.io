@@ -1,23 +1,15 @@
-import random, requests, os, json
-def findVoice(langCode: str)->str:
-    # base_url = "https://eastus.tts.speech.microsoft.com/cognitiveservices/voices/list"
-
-    # # key = os.environ['TTSKEY']
-
-    # payload = {}
-    # headers = {
-    # 'Ocp-Apim-Subscription-Key': '597fd50f663c485b95d7af4d1ac4a63b',
-    # }
-
-    # response = requests.request("GET", base_url, headers=headers, data = payload)
+from importlib.resources import contents
+import random, requests, os, json, urllib.request as urllib2
+def findVoice(langCode: str, gender:str='Female', country:str=None)->str:
+    target_url = 'https://hanschaudry.github.io/personalProjects/Translator/voiceList.json'
+    response = urllib2.urlopen(target_url)
+    voices = json.loads(response.read())
 
     def lang_check(voice):
-        return (langCode) in voice['Locale'] and voice['Gender'] == 'Female'
-    json_file_path = "voiceList.json"
+        return (langCode) in voice['Locale'] and voice['Gender'] == gender
 
-    with open(json_file_path, 'r') as j:
-        contents = list(json.loads(j.read()))
-
-    rlist = list(filter(lang_check, contents))
+    rlist = list(filter(lang_check, voices))
     
     return random.choice(rlist)['Voice name']
+
+print(findVoice('fr', 'Male'))

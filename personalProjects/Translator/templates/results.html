@@ -20,10 +20,32 @@
             <strong>Target language code:</strong> {{ target_language }}
         </div>
         <div>
-            <a href="{{ url_for('index') }}">Try another one!</a>
+            <!-- <a href="{{ url_for('index') }}">Try another one!</a> -->
+            <form action="{{url_for('speak')}}" method="POST">
+                <a href="{{url_for('index')}}" class="btn btn-primary">Try another</a>
+            </form>
         </div>
+        <div class="form-group d-flex justify-content-start">
+            <section class="col-3">
+                <label for="gender">Gender:</label>
+                <select name="gender" class="form-control w-100">
+                    <option value="S">Select</option>
+                    <option value="M">Male</option>
+                    <option value="F">Female</option>
+                </select>
+            </section>
+            <section class="col-4">
+                <label for="country">Country:</label>
+                <select name="country" class="form-control w-100">
+                    <option value="S">Select</option>
+                    <option value="US">United States</option>
+                    <option value="CAN">Canada</option>
+                </select>
+            </section>
+        </div>
+
         <form action="{{url_for('speak')}}" method="POST">
-            <button>Read it to me!</button>
+            <button class="btn btn-primary">Read it to me!</button>
         </form>
     </div>
 </body>
